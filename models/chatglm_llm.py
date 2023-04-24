@@ -129,6 +129,7 @@ class ChatGLM(LLM):
                         config=model_config,
                         trust_remote_code=True,
                         **kwargs)
+                    .quantize(4) 
                     .half()
                     .cuda()
                 )
